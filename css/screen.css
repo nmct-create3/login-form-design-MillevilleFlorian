@@ -1,6 +1,19 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 700;
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+
 
 /*------------------------------------*\
 #Variables
@@ -25,12 +38,13 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: "Inter Web",Helvetica, arial, sans-serif;
+    /* font-family: "Inter Web", Arial, Helvetica, sans-serif; */
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -53,7 +67,7 @@ html {
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +172,18 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: purple;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: red;
 }
 
 /*------------------------------------*\
@@ -431,6 +445,30 @@ a:focus {
     ---
     Website main logo
 */
+.c-logo {
+    height: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-logo__symbol {
+    height: 100%;
+    display: block;
+    /* margin-right: auto;
+    margin-left: auto; */
+}
+
+.c-logo__path--1 {
+    fill: #20223a;
+}
+
+.c-logo__path--2 {
+    fill: #3385FF;
+}
+
+.c-logo__path--3 {
+    fill: #1B4186;
+}
 
 /*
     Component: Card
@@ -438,11 +476,35 @@ a:focus {
     Card with box shadow
 */
 
+.c-card {
+    background-color: white;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #00000021;
+    box-shadow: 1px 1px 1px 1px #0000000d;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 48px;
+}
+
+
+
 /*
     Component: Forms
     ---
     Everything form related here
 */
+
+.c-form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-form-field--option {
+    flex-direction: row;
+}
+
 
 /*
     Component: Input
@@ -451,10 +513,32 @@ a:focus {
 */
 
 .c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* all: unset; */
 
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E2E3E7;
+    /* shorthand */
+    /* border-color: 1px solid #E2E3E7; */
+    border-radius: 3px;
+    font-family: inherit;
+    color: #20223a;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    padding-left: 16px;
+    outline: none;
 }
 
 .c-input:focus {
+    border-color: #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385FF4D;
 }
 
 /*
@@ -480,19 +564,33 @@ a:focus {
 */
 
 .c-button {
-
+    font-size: 16px;
+    font-weight: 700;
+    border: #2E77E6;
+    border-radius: 1px;
+    color: #FFFFFF;
+    background-color: #3385FF;
+    line-height: 20px;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-radius: 3px;
 }
 
 .c-button:hover {
-
+    background-color: #4F95FF;
 }
 
 .c-button:focus {
-
+    outline: none;
+    border-color: #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385FF4D;
+    background-color: #3385FF;
 }
 
 .c-button:active {
-
+    background-color: #2E77E6;
 }
 
 .c-button--block {
