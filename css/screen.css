@@ -197,12 +197,14 @@ a:focus {
 */
 
 .o-row {
-    position: relative;
+    position: center;
     padding: 24px 24px 0;
 }
 
 .o-row--login {
     /* stuff here to align the card */
+    display: flex;
+    align-content: center;
 }
 
 /* size modifiers */
@@ -483,12 +485,28 @@ a:focus {
     border-style: solid;
     border-color: #00000021;
     box-shadow: 1px 1px 1px 1px #0000000d;
+}
+
+.c-card__body {
     padding-left: 48px;
     padding-right: 48px;
+    padding-top: 24px;
+}
+
+.c-card__title {
+    display: flex;
+    justify-content: center;
     padding-top: 48px;
 }
 
-
+.c-card__footer {
+    display: flex;
+    justify-content: center;
+    border-width: 1px;
+    border-top-style: solid;
+    border-color: #00000021;
+    padding-top: 24px;
+}
 
 /*
     Component: Forms
@@ -548,7 +566,14 @@ a:focus {
 */
 
 .c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+}
 
+.c-label--option {
+    margin-left: 0;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -613,6 +638,10 @@ a:focus {
 
 .u-color-neutral-dark {
     color: Black;
+}
+
+.u-color-licht-gray {
+    color: #606274;
 }
 
 /*
